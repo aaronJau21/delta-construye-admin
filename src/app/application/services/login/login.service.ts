@@ -15,4 +15,9 @@ export class LoginService {
     const url = `${this.api}/auth/loginUser`;
     return this.http.post<ILoginResponse>(url, data);
   }
+
+  saveToken(data: ILoginResponse): void {
+    localStorage.setItem('token', data.access_token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+  }
 }

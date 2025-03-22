@@ -1,0 +1,20 @@
+<section>
+  <div class="mt-9">
+    @if (getCategories.isLoading()) {
+    <shared-loading />
+    } @else if (getCategories.error()) {
+    <p>Error: {{ getCategories.error() }}</p>
+    } @else {
+
+    <table class="mx-auto table-auto">
+      
+    </table>
+
+    @for (item of getCategories.value(); track item.id) {
+    <p>{{item.name}}</p>
+    }
+
+    }
+  </div>
+
+</section>

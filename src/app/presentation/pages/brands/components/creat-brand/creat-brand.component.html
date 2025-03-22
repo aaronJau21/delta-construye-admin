@@ -1,0 +1,28 @@
+<div class="bg-black opacity-25 h-screen w-[102.7rem] absolute"></div>
+
+<div class="z-50 text-black">
+  <form
+    [formGroup]="formCreateBrand"
+    class="absolute bg-white rounded-b-xl top-96 left-[60vh] p-5"
+  >
+    <div>
+      <label for="Nombre">Nombre</label>
+      <input
+        type="text"
+        id="Nombre"
+        class="border border-black rounded placeholder:text-center"
+        placeholder="Nombre de la marca"
+        formControlName="name"
+      />
+    </div>
+
+    <div class="flex justify-between">
+      <button type="button" (click)="submitCreateBrand()" class="button-save">
+        Agregar
+      </button>
+      <button type="button" (click)="onClose()" class="button-cancel">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
